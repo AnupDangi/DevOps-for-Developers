@@ -3,26 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: deploy-nginx
-  name: deploy-nginx
+    app: nginx
+  name: nginx
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: deploy-nginx
+      app: nginx
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: deploy-nginx
+        app: nginx
     spec:
-      hostNetwork: true
       containers:
-      - image: piyushsachdeva/my-private-repo:latest
-        name: hello-app
+      - image: piyushsachdeva:hello-app:latest
+        name: nginx
         ports:
         - containerPort: 3000
-      imagePullSecrets:
-        - name: sample-docker-secret
 

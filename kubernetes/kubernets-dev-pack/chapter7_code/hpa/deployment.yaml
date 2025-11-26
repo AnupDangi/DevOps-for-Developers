@@ -19,10 +19,15 @@ spec:
     spec:
       hostNetwork: true
       containers:
-      - image: piyushsachdeva/my-private-repo:latest
+      - image: anupdangi69/hello-app:latest
         name: hello-app
+        resources:
+          requests:
+            cpu: 100m
+          limits:
+            cpu: 200m
         ports:
         - containerPort: 3000
       imagePullSecrets:
-        - name: sample-docker-secret
+        - name: docker-secret
 

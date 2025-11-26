@@ -19,10 +19,11 @@ spec:
     spec:
       hostNetwork: true
       containers:
-      - image: piyushsachdeva/my-private-repo:latest
+      - image: piyushsachdeva/hello-app:4.0
         name: hello-app
+        env:
+        - name: app_name
+          value: "Kubernetes-101"
         ports:
         - containerPort: 3000
-      imagePullSecrets:
-        - name: sample-docker-secret
 

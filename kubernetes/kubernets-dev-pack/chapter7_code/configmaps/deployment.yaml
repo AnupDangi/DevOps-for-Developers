@@ -19,10 +19,19 @@ spec:
     spec:
       hostNetwork: true
       containers:
-      - image: piyushsachdeva/my-private-repo:latest
+      - image: piyushsachdeva/hello-app:4.0
         name: hello-app
+        env:
+        - name: FIRST_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: sample-cm
+              key: first
+        - name: LAST_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: sample-cm
+              key: last
         ports:
         - containerPort: 3000
-      imagePullSecrets:
-        - name: sample-docker-secret
 
