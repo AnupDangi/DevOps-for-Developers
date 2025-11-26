@@ -1,3 +1,10 @@
 *.env
 *node_modules/
 /kubernetes/kubernetes-dev-pack/chapter7_code/secrets*/
+# Add these patterns to catch all extras/sample.yaml files that might contain secrets
+**/extras/sample.yaml
+**/secrets/**
+**/*secret*
+**/*token*
+*.key
+*.pem
