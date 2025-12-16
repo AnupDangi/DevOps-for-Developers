@@ -2,6 +2,10 @@
 
 A hands-on repository of Docker and Kubernetes examples, cloud-specific manifests, and small full-stack app demos. Use this repo to practice containerization, orchestration, storage, and provider nuances (AWS, GCP, Azure) with runnable, minimal examples.
 
+## If you want to learn this you can refer this youtube content:
+
+https://www.youtube.com/watch?v=Ou9j73aWgyE&list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa
+
 ## Repository Layout
 
 - devopsprojects/
